@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:weightSum="2"
+        tools:context="com.goalwise.MainActivity">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_81sdp"
+            android:layout_weight="2.0"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/relativeMonthly"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_2sdp"
+                android:layout_marginLeft="@dimen/_4sdp">
+
+                <TextView
+                    android:id="@+id/textRisk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Monthly Investment"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:layout_toRightOf="@+id/textRisk"
+                    android:src="@drawable/ic_action_help" />
+
+            </RelativeLayout>
+
+            <!--      <SeekBar
+                      android:id="@+id/seekBarThousand"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_marginLeft="@dimen/_5sdp"
+                      android:layout_marginTop="@dimen/_23sdp"
+                      android:max="9"
+                      android:maxHeight="@dimen/_2sdp"
+                      android:minHeight="@dimen/_2sdp"
+                      android:progressBackgroundTint="@color/colorAccent"
+                      android:progressDrawable="@drawable/background"
+                      android:thumbTint="@color/colorGreen" />-->
+
+
+            <net.qiujuer.genius.ui.widget.SeekBar
+                android:id="@+id/seekBarThousand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_14sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:maxHeight="@dimen/_2sdp"
+                android:minHeight="@dimen/_2sdp"
+                android:progressDrawable="@drawable/background"
+                app:gAllowTrackClickToDrag="true"
+
+                app:gIndicator="auto"
+                app:gIndicatorBackgroundColor="@color/m_seek_bar_indicator_bg"
+                app:gIndicatorFormatter="%d"
+                app:gIndicatorSeparation="14dp"
+                app:gIndicatorTextAppearance="@style/Genius.Widget.BalloonMarker.TextAppearance"
+                app:gIndicatorTextPadding="2dp"
+                app:gMax="9"
+                app:gMin="0"
+                app:gMirrorForRtl="true"
+                app:gRippleColor="@color/m_seek_bar_ripple"
+                app:gScrubberColor="@color/m_seek_bar_scrubber"
+                app:gScrubberStroke="4dp"
+                app:gThumbColor="@color/m_seek_bar_thumb"
+                app:gThumbSize="6dp"
+                app:gTickSize="3dp"
+                app:gTouchSize="12dp"
+                app:gTrackColor="@color/colorAccent"
+                app:gTrackStroke="2dp"
+                app:gValue="1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_14sdp"
+                android:orientation="horizontal"
+                android:weightSum="6">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="0K" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="1K" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="3K" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="5K" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="7K" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="9K" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="@dimen/_54sdp"
+                android:layout_height="@dimen/_54sdp"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_shape"
+                android:gravity="center">
+
+                <EditText
+                    android:id="@+id/textThousand"
+                    android:layout_width="@dimen/_44sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@null"
+                    android:gravity="center"
+                    android:hint="1"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:maxLines="1"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="thousand" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</layout>
