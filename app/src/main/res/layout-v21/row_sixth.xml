@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.goalwise.MainActivity">
+
+
+        <TextView
+            android:id="@+id/textRiskDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="?actionBarSize"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/_1sdp"
+            android:gravity="center"
+            android:text="Want to know how much you should save ? Use this RETIREMENT TOOL" />
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:elevation="@dimen/_5sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_54sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textRiskDescription"
+
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <RelativeLayout
+                    android:id="@+id/relativeSaveDraft"
+                    android:layout_width="0dp"
+                    android:layout_height="?actionBarSize"
+                    android:layout_weight="1"
+                    android:background="@color/colorWhite">
+
+                    <TextView
+                        android:id="@+id/textSaveAsDraft"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Save as draft"
+
+                        android:textColor="@color/colorPrimary" />
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:visibility="gone" />
+
+
+                <RelativeLayout
+                    android:id="@+id/relativeSaveInvest"
+                    android:layout_width="0dp"
+                    android:layout_height="?actionBarSize"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary">
+
+                    <TextView
+                        android:id="@+id/textSaveAndInvest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="Save and Invest"
+                        android:textColor="@color/colorWhite" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+
+    </RelativeLayout>
+</layout>

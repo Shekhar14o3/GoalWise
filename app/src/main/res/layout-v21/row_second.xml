@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.goalwise.MainActivity">
+
+
+        <RelativeLayout
+            android:id="@+id/relativeRisk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_2sdp"
+            android:layout_marginLeft="@dimen/_4sdp">
+
+            <TextView
+                android:id="@+id/textRisk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Risk"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:layout_toRightOf="@+id/textRisk"
+                android:src="@drawable/ic_action_help" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <RelativeLayout
+                android:id="@+id/relativeLowRisk"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginRight="@dimen/_14sdp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape">
+
+                <TextView
+                    android:id="@+id/textLow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Low Risk"
+                    android:textColor="@color/colorBlack" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeModerateRisk"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginRight="@dimen/_14sdp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape">
+
+                <TextView
+                    android:id="@+id/textModerate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="Moderate Risk"
+                    android:textColor="@color/colorBlack" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeHighRisk"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_shape">
+
+                <TextView
+                    android:id="@+id/textHigh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="High Risk"
+                    android:textColor="@color/colorBlack" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_14sdp"
+            android:orientation="horizontal"
+            android:weightSum="1.2">
+
+            <TextView
+                android:id="@+id/textEquity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:text="50 %"
+                android:textStyle="bold" />
+            <!--
+                        <SeekBar
+                            android:id="@+id/seekBarRisk"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.1"
+                            android:max="15"
+                            android:maxHeight="@dimen/_2sdp"
+                            android:minHeight="@dimen/_2sdp"
+                            android:progressBackgroundTint="@color/colorAccent"
+                            android:progressDrawable="@drawable/background"
+                            android:thumbTint="@color/colorAccent" />-->
+
+            <net.qiujuer.genius.ui.widget.SeekBar
+                android:id="@+id/seekBarRisk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.1"
+                android:max="15"
+                android:maxHeight="@dimen/_2sdp"
+                android:minHeight="@dimen/_2sdp"
+                android:progressDrawable="@drawable/background"
+                app:gAllowTrackClickToDrag="true"
+
+                app:gIndicator="auto"
+                app:gIndicatorBackgroundColor="@color/m_seek_bar_indicator_bg"
+                app:gIndicatorFormatter="%d"
+                app:gIndicatorSeparation="14dp"
+                app:gIndicatorTextAppearance="@style/Genius.Widget.BalloonMarker.TextAppearance"
+                app:gIndicatorTextPadding="2dp"
+                app:gMax="100"
+                app:gMin="50"
+                app:gMirrorForRtl="true"
+                app:gRippleColor="@color/m_seek_bar_ripple"
+                app:gScrubberColor="@color/m_seek_bar_scrubber"
+                app:gScrubberStroke="4dp"
+                app:gThumbColor="@color/m_seek_bar_thumb"
+                app:gThumbSize="6dp"
+                app:gTickSize="3dp"
+                app:gTouchSize="12dp"
+                app:gTrackColor="@color/colorAccent"
+                app:gTrackStroke="2dp"
+                app:gValue="1" />
+
+
+            <TextView
+                android:id="@+id/textDebt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"
+                android:text="100 %"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="Equity" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:text="Debt" />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</layout>
